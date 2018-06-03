@@ -16,8 +16,8 @@ login_manager.login_message_category = 'info'
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 547
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'keepcalmncode@gmail.com'
-app.config['MAIL_PASSWORD'] = '9243997942'
+app.config['MAIL_USERNAME'] = 'MAILID'
+app.config['MAIL_PASSWORD'] = 'PASSWORD'
 mail = Mail(app)
 
 

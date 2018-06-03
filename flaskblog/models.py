@@ -15,9 +15,9 @@ class User(db.Model,UserMixin):
     password = db.Column(db.String(160), nullable=False)
     posts = db.relationship('Post', backref='author', lazy=True)
 
-    def get_reset_token(self,expires_sec=180):
+    def get_reset_token(self,expires_sec=2400):
         s = sez(app.config['SECRET_KEY'], expires_sec)
-        return s.dumps({'user_id': self.id}).decod('utf-8')
+        return s.dumps({'user_id': self.id}).decode('utf-8')
 
     @staticmethod
     def verify_reset_token(token):
